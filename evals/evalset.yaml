@@ -1,1 +1,40 @@
-
+qa_pairs:
+  - question: "What is the main benefit of RAG over fine-tuning?"
+    answer: "RAG allows dynamic knowledge updates without retraining, reducing costs and enabling real-time information retrieval."
+    context: ["RAG systems retrieve relevant documents at inference time, while fine-tuning requires expensive model retraining for knowledge updates."]
+    
+  - question: "How does vector similarity search work in RAG?"
+    answer: "Vector similarity search converts text to embeddings and finds nearest neighbors using cosine similarity or L2 distance."
+    context: ["Text is encoded into high-dimensional vectors where semantic similarity corresponds to vector proximity."]
+    
+  - question: "What causes hallucination in RAG systems?"
+    answer: "Hallucinations occur when retrieved context is insufficient, irrelevant, or when the model extrapolates beyond the provided information."
+    context: ["RAG hallucinations stem from retrieval failures, context window limits, or model overconfidence."]
+    
+  - question: "What is the ideal chunk size for RAG?"
+    answer: "Optimal chunk size typically ranges from 256-512 tokens, balancing context completeness with retrieval precision."
+    context: ["Smaller chunks improve precision but may lose context; larger chunks provide context but reduce relevance."]
+    
+  - question: "How do you evaluate RAG faithfulness?"
+    answer: "Faithfulness measures whether the generated answer is grounded in retrieved context, typically scored 0-1 using NLI models."
+    context: ["Faithfulness evaluation checks if claims in the answer can be inferred from the retrieved documents."]
+    
+  - question: "What is semantic caching in RAG?"
+    answer: "Semantic caching stores embeddings of previous queries to return cached responses for similar questions, reducing latency and API costs."
+    context: ["Semantic caching identifies similar queries using embedding similarity and returns pre-computed responses."]
+    
+  - question: "How does hybrid search improve RAG?"
+    answer: "Hybrid search combines keyword-based BM25 with vector similarity, capturing both lexical matches and semantic meaning."
+    context: ["Hybrid search leverages BM25 for exact matches and dense retrieval for semantic understanding."]
+    
+  - question: "What is the role of reranking in RAG?"
+    answer: "Reranking reorders initial retrieval results using cross-encoders or other models to improve relevance of top results."
+    context: ["Reranking models score query-document pairs more accurately than initial retrieval methods."]
+    
+  - question: "How do you handle multi-hop reasoning in RAG?"
+    answer: "Multi-hop reasoning chains multiple retrieval steps, using initial answers to formulate follow-up queries for complex questions."
+    context: ["Multi-hop RAG iteratively retrieves and reasons, building answers across multiple information sources."]
+    
+  - question: "What metrics evaluate RAG performance?"
+    answer: "Key RAG metrics include faithfulness, answer relevance, context precision, context recall, and end-to-end latency."
+    context: ["RAG evaluation uses retrieval metrics (precision/recall) and generation metrics (faithfulness/relevance)."]
