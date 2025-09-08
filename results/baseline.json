@@ -1,1 +1,33 @@
-
+{
+  "run_id": "baseline_001",
+  "timestamp": "2024-01-11T15:00:00Z",
+  "model": "gpt-3.5-turbo",
+  "dataset": "evalset_v0",
+  "metrics": {
+    "faithfulness": {
+      "mean": 0.72,
+      "scores": [0.65, 0.70, 0.68, 0.75, 0.72, 0.80, 0.71, 0.69, 0.73, 0.77]
+    },
+    "context_precision": {
+      "mean": 0.68,
+      "scores": [0.62, 0.65, 0.70, 0.68, 0.71, 0.69, 0.66, 0.72, 0.67, 0.70]
+    },
+    "answer_relevance": {
+      "mean": 0.74,
+      "scores": [0.70, 0.72, 0.75, 0.73, 0.76, 0.74, 0.71, 0.77, 0.73, 0.79]
+    },
+    "latency_ms": {
+      "mean": 850,
+      "p50": 820,
+      "p95": 1100,
+      "p99": 1250
+    }
+  },
+  "config": {
+    "chunk_size": 512,
+    "overlap": 50,
+    "retriever": "bm25",
+    "top_k": 5
+  },
+  "notes": "Baseline run with default settings. Target: faithfulness ≥0.85, context_precision ≥0.80, latency ≤800ms"
+}
