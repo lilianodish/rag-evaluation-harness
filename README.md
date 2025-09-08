@@ -7,7 +7,7 @@
 
 Small, truthful evaluation harness for Retrieval-Augmented Generation (RAG) systems. Measures what matters for enterprise deployment.
 
-## Purpose
+## 🎯 Purpose
 
 Most teams ship RAG to production without knowing:
 - If it hallucinates (makes up information)
@@ -16,7 +16,7 @@ Most teams ship RAG to production without knowing:
 
 This harness provides quantified confidence through automated evaluation.
 
-## Current Performance
+## 📊 Current Performance
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
@@ -25,7 +25,7 @@ This harness provides quantified confidence through automated evaluation.
 | **Answer Relevance** | 0.74 | ≥0.85 | 🟡 In Progress |
 | **Latency (p50)** | 820ms | ≤800ms | 🟢 Close |
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 graph LR
